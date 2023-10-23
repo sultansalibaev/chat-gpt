@@ -1669,7 +1669,7 @@ body #app {
 #app [type=button],
 #app [type=reset],
 #app [type=submit],
-#app button:not(#app .modal button) {
+#app button:not(#app .modal button):not(#app button.chatgpt-request-send) {
     -webkit-appearance: button;
     background-color: transparent;
     background-image: none
