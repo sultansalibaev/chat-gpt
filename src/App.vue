@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ChatGPTModal />
+    <span @click="chatgpt_item = !chatgpt_item" class="nav-label" style="color: #a7b1c2;font-weight: 600;">ChatGPT</span>
 </template>
-
+  
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ChatGPTModal from './components/ChatGPTModal.vue'
+import { chatgpt_item } from '@/use/data/index'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    components: {
+        ChatGPTModal
+    },
+    setup() {
+        return { chatgpt_item };
+    },
 }
 </script>
-
+  
 <style>
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
 }
+
 </style>
+  
